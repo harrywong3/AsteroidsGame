@@ -1,6 +1,6 @@
 Spaceship Mrpew;
 Star[] universe;
-ArrayList <Asteroid> bam= new ArrayList <Asteroid>();;
+ArrayList <Asteroid> bam= new ArrayList <Asteroid>();
 void setup(){
   size(600,600);
   background(0);
@@ -20,6 +20,7 @@ void draw(){
   for (int i=0; i<bam.size();i++){
   bam.get(i).move();
   bam.get(i).show();
+  if(dist((float)Mrpew.getXcenter(),(float)Mrpew.getYcenter(),(float)bam.get(i).getXcenter(),(float)bam.get(i).getYcenter())<=36)bam.remove(i);
   }
 }
 
