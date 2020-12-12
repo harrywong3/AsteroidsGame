@@ -4,7 +4,7 @@ class Spaceship extends Floater
   corners = 6;  //the number of corners, a triangular floater has 3   
   xCorners = new float []{20,-10,-5,-10,-5,-10}; 
   yCorners = new float []{0,-10,-5,0,5,10};
-  myColor= color(255,255,255);   
+  myColor= color(255,0,150);   
   myCenterX=300;
   myCenterY=300;
   myXspeed=0;
