@@ -1,24 +1,28 @@
 Spaceship Mrpew;
 Star[] universe;
-public void setup() 
-{
+ArrayList <Asteroid> bam= new ArrayList <Asteroid>();;
+void setup(){
   size(600,600);
   background(0);
   Mrpew= new Spaceship();
   universe= new Star[75];
-  for (int i=0; i<universe.length; i++){
+  for (int i=0; i<universe.length; i++)
     universe[i]=new Star();
-  }
+  for (int i=0; i<8; i++)
+  bam.add(new Asteroid());
 }
-public void draw() 
-{
+void draw(){
   background(0);
-  for (int i=0; i<universe.length; i++){
+  for (int i=0; i<universe.length; i++)
     universe[i].show();
-  }
   Mrpew.move();
   Mrpew.show();
+  for (int i=0; i<bam.size();i++){
+  bam.get(i).move();
+  bam.get(i).show();
+  }
 }
+
 public void keyPressed(){
     if(key=='a'){
     Mrpew.turn(-9);
@@ -39,7 +43,8 @@ public void keyPressed(){
       Mrpew.newPointDirection();
       for (int i=0; i<universe.length; i++){
       universe[i]=new Star();
+      for (int a=0; a<8; a++)
+      bam.set(a,new Asteroid());
       }
     }
 }
-
