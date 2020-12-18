@@ -17,10 +17,6 @@ class Asteroid extends Floater{
     turn(spinSpeed);
     super.move();
   }
-    public double getXcenter(){
-      return myCenterX;
-    }
-    public double getYcenter(){
-      return myCenterY;
-    }
+    public double getXcenter(){return myCenterX;}
+    public double getYcenter(){return myCenterY;}
 }
