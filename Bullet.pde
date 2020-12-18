@@ -1,6 +1,6 @@
 class Bullet extends Floater
 {
-  boolean iGuessTheyNeverMissHuh;
+  private boolean iGuessTheyNeverMissHuh;
  public Bullet (){
    myCenterX= Mrpew.getXcenter();
    myCenterY= Mrpew.getYcenter();
